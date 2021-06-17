@@ -1,13 +1,15 @@
 let canvas = document.getElementById('snowflake'),
     ctx = canvas.getContext('2d'),
-    maxLevel = 4,
+    maxLevel = 5,
     branches = 2;
 
 canvas.width = canvas.height = 600;
-
 ctx.translate(canvas.width / 2, canvas.height / 2);
 
-let angle = Math.PI * 2 * Math.random();
+let angles = []
+for (let i = 0; i < 6; i++) {
+    angles.push(Math.PI * 2 * Math.random());
+}
 
 for (let i = 0; i < 6; i++) {
     drawLine(0);
@@ -32,14 +34,14 @@ function drawLine (level) {
 
         ctx.save();
 
-        ctx.rotate(angle);
+        ctx.rotate(angles[level]);
         drawLine(level + 1);
 
         ctx.restore();
 
         ctx.save();
 
-        ctx.rotate(-angle);
+        ctx.rotate(-angles[level]);
         drawLine(level + 1);
 
         ctx.restore();
