@@ -31,21 +31,18 @@ function drawLine (level) {
     for (let i = 1; i < 3; i++) {
         ctx.save();
 
-        ctx.translate(200 * i / 3, 0);
+        let rx = 200 + Math.floor(Math.random() * 50)
+        ctx.translate(rx * i / 3, 0);
         ctx.scale(0.5, 0.5);
 
         ctx.save();
-
         ctx.rotate(angles[level]);
         drawLine(level + 1);
-
         ctx.restore();
 
         ctx.save();
-
         ctx.rotate(-angles[level]);
         drawLine(level + 1);
-
         ctx.restore();
 
         ctx.restore();
