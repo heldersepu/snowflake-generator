@@ -7,15 +7,15 @@ canvas.width = canvas.height = 600;
 ctx.translate(canvas.width / 2, canvas.height / 2);
 
 let angles = []
-angles.push((Math.floor(Math.random() * 10) + 1)/10);
+angles.push((Math.floor(Math.random() * 100) + 111)/100);
 for (let i = 0; i < 5; i++) {
     angles.push(Math.PI * 2 * Math.random());
 }
-console.log(angles)
 
-for (let i = 0; i < 6; i++) {
+let trunks = Math.floor(Math.random() * 3) + 5
+for (let i = 0; i < 5; i++) {
     drawLine(0);
-    ctx.rotate(Math.PI * 2 / 6);
+    ctx.rotate(Math.PI * 2 / 5);
 }
 
 function drawLine (level) {
