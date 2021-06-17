@@ -48,5 +48,3 @@ function drawLine (level) {
         ctx.restore();
     }
 }
-
-//drawLine(0);
