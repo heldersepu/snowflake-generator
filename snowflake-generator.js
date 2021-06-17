@@ -13,9 +13,9 @@ for (let i = 0; i < 5; i++) {
 }
 
 let trunks = Math.floor(Math.random() * 3) + 5
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < trunks; i++) {
     drawLine(0);
-    ctx.rotate(Math.PI * 2 / 5);
+    ctx.rotate(Math.PI * 2 / trunks);
 }
 
 function drawLine (level) {
