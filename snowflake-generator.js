@@ -13,6 +13,7 @@ for (let i = 0; i < 5; i++) {
 }
 
 let trunks = Math.floor(Math.random() * 4) + 5
+ctx.rotate(Math.random() * 2);
 for (let i = 0; i < trunks; i++) {
     drawLine(0);
     ctx.rotate(Math.PI * 2 / trunks);
