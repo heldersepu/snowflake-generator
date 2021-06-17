@@ -3,8 +3,7 @@ let canvas = document.getElementById('snowflake'),
     maxLevel = 4,
     branches = 2;
 
-canvas.width = 1000;
-canvas.height = 1000;
+canvas.width = canvas.height = 600;
 
 ctx.translate(canvas.width / 2, canvas.height / 2);
 
