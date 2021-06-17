@@ -5,6 +5,7 @@ let canvas = document.getElementById('snowflake'),
 
 canvas.width = canvas.height = 600;
 ctx.translate(canvas.width / 2, canvas.height / 2);
+ctx.lineCap = "round";
 
 let angles = []
 angles.push((Math.floor(Math.random() * 100) + 111)/100);
