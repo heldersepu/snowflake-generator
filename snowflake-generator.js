@@ -7,9 +7,11 @@ canvas.width = canvas.height = 600;
 ctx.translate(canvas.width / 2, canvas.height / 2);
 
 let angles = []
-for (let i = 0; i < 6; i++) {
+angles.push((Math.floor(Math.random() * 10) + 1)/10);
+for (let i = 0; i < 5; i++) {
     angles.push(Math.PI * 2 * Math.random());
 }
+console.log(angles)
 
 for (let i = 0; i < 6; i++) {
     drawLine(0);
