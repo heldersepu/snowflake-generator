@@ -35,14 +35,14 @@ function drawLine (level) {
 
         ctx.rotate(angle);
         drawLine(level + 1);
-        
+
         ctx.restore();
 
         ctx.save();
 
         ctx.rotate(-angle);
         drawLine(level + 1);
-        
+
         ctx.restore();
 
         ctx.restore();
